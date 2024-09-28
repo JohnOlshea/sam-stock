@@ -14,8 +14,8 @@ const LoginPage = () => {
             {/* Cover Image Column (Visible only on large screens) */}
             <div className="hidden bg-muted lg:block">
                 <Image
-                    src="/placeholder.svg"
-                    alt="Image"
+                    src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/qpzixtgr2tnfw7un6ofa"
+                    alt="Stock market trading illustration"
                     width="1920"
                     height="1080"
                     className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
@@ -32,6 +32,8 @@ const LoginPage = () => {
                             Enter your email below to login to your account
                         </p>
                     </div>
+
+                    {/* Login Form */}
                     <form className="grid gap-4">
                         <div className="grid gap-2">
                             <Label htmlFor="email">Email</Label>
