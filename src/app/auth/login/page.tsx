@@ -1,5 +1,8 @@
-import Image from "next/image"
+"use client"
+// import Image from "next/image"
+import { useRouter } from "next/navigation";
 import Link from "next/link"
+import { FormEvent } from "react";
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -9,22 +12,32 @@ export const description =
     "A login page with two columns. The first column has the login form with email and password. There's a Forgot your passwork link and a link to sign up if you do not have an account. The second column has a cover image."
 
 const LoginPage = () => {
+    const router = useRouter();
+
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      
+      router.push("/dashboard/admin");
+    };
+
     return (
         <>
             {/* Cover Image Column (Visible only on large screens) */}
-            <div className="hidden bg-muted lg:block">
-                <Image
+            <div className="hidden bg-muted lg:block relative">
+                {/* <Image
                     src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/qpzixtgr2tnfw7un6ofa"
                     alt="Stock market trading illustration"
                     width="1920"
                     height="1080"
                     className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
                     priority
-                />
+                /> */}
+                <div className="absolute top-1/2 right-[-7.5rem] transform -translate-y-1/2 bg-gray-300 h-[15rem] w-[15rem]">
+                </div>
             </div>
             {/* Login Form Column */}
-            <div className="flex items-center justify-center py-12">
-                <div className="mx-auto grid w-[350px] gap-6">
+            <div className="flex items-center justify-center py-12 lg:col-span-2">
+                <div className="mx-auto grid gap-6">
                     {/* Form Header */}
                     <div className="grid gap-2 text-center">
                         <h1 className="text-3xl font-bold">Login</h1>
@@ -34,7 +47,7 @@ const LoginPage = () => {
                     </div>
 
                     {/* Login Form */}
-                    <form className="grid gap-4">
+                    <form onSubmit={handleSubmit} className="grid gap-4">
                         <div className="grid gap-2">
                             <Label htmlFor="email">Email</Label>
                             <Input
@@ -67,17 +80,12 @@ const LoginPage = () => {
                         <Button type="submit" className="w-full">
                             Login
                         </Button>
-
-                        {/* OAuth Login Option */}
-                        <Button variant="outline" className="w-full">
-                            Login with Google
-                        </Button>
                     </form>
 
                     {/* Sign-up Link */}
                     <div className="mt-4 text-center text-sm">
                         Don&apos;t have an account?{" "}
-                        <Link href="#" className="underline">
+                        <Link href="/auth/register" className="underline">
                             Sign up
                         </Link>
                     </div>
