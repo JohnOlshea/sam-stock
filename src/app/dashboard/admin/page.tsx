@@ -2,30 +2,23 @@
 
 import Link from "next/link"
 import {
-  Bell,
   CircleUser,
   Home,
-  CreditCard,
-  DollarSign,
   Menu,
   Package,
   Package2,
-  Search,
   ShoppingCart,
   Users,
 } from "lucide-react"
 
 import {
   Avatar,
-  AvatarFallback,
-  AvatarImage,
 } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -51,7 +44,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { ModeToggle } from "@/components/ui/modeToggle"
 import {
@@ -136,7 +128,7 @@ export default function Dashboard() {
                 size="icon"
                 className="shrink-0 md:hidden"
               >
-                <Menu className="h-5 w-5" />
+                <Menu className="h-5 w-5"/>
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
