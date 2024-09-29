@@ -71,6 +71,7 @@ import {
   SiGoogle,
   SiMcdonalds,
   SiWise,
+  SiStockx,
 } from "react-icons/si";
 import { FaArrowUpRightDots } from "react-icons/fa6";
 import { FaDollarSign } from "react-icons/fa";
@@ -80,27 +81,27 @@ export const description =
 
 export default function Dashboard() {
   return (
-    <div className="grid min-h-screen w-full md:grid-cols-[180px_1fr] lg:grid-cols-[240px_1fr]">
-      <div className="hidden bg-muted/40 md:block">
+    <div className="bg-[#393d32] dark:bg-transparent grid min-h-screen w-full md:grid-cols-[180px_1fr] lg:grid-cols-[240px_1fr]">
+      <div className="hidden md:block dark:bg-muted/40">
         <div className="flex h-full max-h-screen flex-col gap-2">
           <div className="flex h-14 items-center px-4 lg:h-[60px] lg:px-6">
-            <Link href="/" className="flex items-center gap-2 font-semibold">
-              <Package2 className="h-6 w-6" />
-              <span className="">Stockem</span>
+            <Link href="/" className="text-white flex items-center gap-2 font-semibold">
+              <SiStockx className="h-6 w-6" />
+              <span className="">SamStocks</span>
             </Link>
           </div>
           <div className="flex-1">
             <nav className="grid gap-4 items-start text-sm font-medium mt-8">
               <Link
                 href="#"
-                className="flex items-center gap-3 pl-6 pr-3 py-2 py-2 text-muted-foreground transition-all hover:text-primary"
+                className="text-white flex items-center gap-3 pl-6 pr-3 py-2 py-2 text-muted-foreground transition-all hover:bg-[#2e3327] dark:hover:bg-muted"
               >
                 <Home className="h-4 w-4" />
                 Dashboard
               </Link>
               <Link
                 href="#"
-                className="flex items-center gap-3 pl-6 pr-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                className="text-white flex items-center gap-3 pl-6 pr-3 py-2 text-muted-foreground transition-all hover:bg-[#2e3327] dark:hover:bg-muted"
               >
                 <ShoppingCart className="h-4 w-4" />
                 Users
@@ -110,39 +111,24 @@ export default function Dashboard() {
               </Link>
               <Link
                 href="#"
-                className="flex items-center gap-3 bg-muted pl-6 pr-3 py-2 text-primary transition-all hover:text-primary"
+                className="text-white flex items-center gap-3 bg-[#2e3327] pl-6 pr-3 py-2 transition-all hover:bg-[#2e3327] dark:bg-muted dark:hover:bg-muted"
               >
                 <Package className="h-4 w-4" />
                 Stock Manager{" "}
               </Link>
               <Link
                 href="#"
-                className="flex items-center gap-3 pl-6 pr-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                className="text-white flex items-center gap-3 pl-6 pr-3 py-2 text-muted-foreground transition-all hover:bg-[#2e3327] dark:hover:bg-muted"
               >
                 <Users className="h-4 w-4" />
                 Market
               </Link>
             </nav>
           </div>
-          <div className="mt-auto p-4">
-            <Card x-chunk="dashboard-02-chunk-0">
-              <CardHeader className="p-2 pt-0 md:p-4">
-                <CardTitle>Upgrade to Pro</CardTitle>
-                <CardDescription>
-                  Get exclusive access to IPOs and alternative investments like cryptocurrencies.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="p-2 pt-0 md:p-4 md:pt-0">
-                <Button size="sm" className="w-full">
-                  Upgrade
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </div>
       <div className="flex flex-col">
-        <header className="flex h-14 items-center gap-4 bg-muted/40 px-4 lg:h-[60px] lg:px-6">
+        <header className="dark:bg-muted/40 flex h-14 items-center gap-4 pr-4 lg:h-[60px] lg:pr-6">
           <Sheet>
             <SheetTrigger asChild>
               <Button
@@ -195,38 +181,12 @@ export default function Dashboard() {
                   Market
                 </Link>
               </nav>
-              <div className="mt-auto">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Upgrade to Pro</CardTitle>
-                    <CardDescription>
-                      Unlock all features and get unlimited access to our
-                      support team.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Button size="sm" className="w-full">
-                      Upgrade
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
             </SheetContent>
           </Sheet>
-          <div className="w-full flex-1">
-            <form>
-              <div className="relative">
-                <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-                <Input
-                  type="search"
-                  placeholder="Search..."
-                  className="w-full appearance-none bg-background pl-8 shadow-none md:w-2/3 lg:w-1/3"
-                />
-              </div>
-            </form>
-          </div>
+          <div className="w-full flex-1"></div>
+          <p className="text-white text-sm font-base">Hi! John Doe</p>
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
+            <DropdownMenuTrigger asChild className="text-white bg-[#2e3327] hover:bg-[#393d32] dark:bg-secondary dark:hover:bg-secondary border-[#2e3327]">
               <Button variant="secondary" size="icon" className="rounded-full">
                 <CircleUser className="h-5 w-5" />
                 <span className="sr-only">Toggle user menu</span>
@@ -243,22 +203,21 @@ export default function Dashboard() {
               </Link>
             </DropdownMenuContent>
           </DropdownMenu>
-          <p className="text-sm font-base">Hi! John Doe</p>
           <ModeToggle />
         </header>
-        <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
+        <main className="bg-white dark:bg-transparent rounded-2xl flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
           <div className="flex items-center">
             <h1 className="text-lg font-semibold md:text-2xl">Dashboard</h1>
           </div>
 
           <div className="grid flex-1 items-start gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
             <div className="grid auto-rows-max items-start md:gap-8 lg:col-span-2">
-              <div className="grid gap-2 md:grid-cols-2 md:gap-4 lg:grid-cols-3">
+              <div className="grid gap-2 grid-cols-2 md:grid-cols-2 md:grid-cols-3 md:gap-4 lg:grid-cols-3">
                 <Card className="bg-[#eaf1f3] border-none shadow-none dark:bg-gray-900" x-chunk="dashboard-01-chunk-0">
                   <CardHeader className="flex flex-row p-[7px] mb-[-17px] gap-2 items-center">
                     <SiApple className="w-7 h-7 p-1 text-white bg-gray-900 dark:bg-transparent dark:border dark:border-[#27272a] rounded-lg" />
                     <p className="text-sm">
-                      Apple <span className="text-muted-foreground">TSL</span>
+                      Apple <span className="text-muted-foreground">APPL</span>
                     </p>
                   </CardHeader>
                   <ChartContainer
@@ -348,7 +307,7 @@ export default function Dashboard() {
                       />
                     </AreaChart>
                   </ChartContainer>
-                  <CardHeader className="pb-2">
+                  <CardHeader className="pb-0">
                     <CardTitle className="text-sm font-medium">
                       Current Value
                     </CardTitle>
@@ -455,7 +414,7 @@ export default function Dashboard() {
                       />
                     </AreaChart>
                   </ChartContainer>
-                  <CardHeader className="pb-2">
+                  <CardHeader className="pb-0">
                     <CardTitle className="text-sm font-medium">
                       Current Value
                     </CardTitle>
@@ -472,7 +431,7 @@ export default function Dashboard() {
                   <CardHeader className="flex flex-row p-[7px] mb-[-17px] gap-2 items-center">
                     <SiAmazon className="w-7 h-7 p-1 text-white bg-gray-900 dark:bg-transparent dark:border dark:border-[#27272a] rounded-lg" />
                     <p className="text-sm">
-                      Amazon <span className="text-muted-foreground">TSL</span>
+                      Amazon <span className="text-muted-foreground">AMZN</span>
                     </p>
                   </CardHeader>
                   <ChartContainer
@@ -562,8 +521,10 @@ export default function Dashboard() {
                       />
                     </AreaChart>
                   </ChartContainer>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium">Current Value</CardTitle>
+                  <CardHeader className="pb-0">
+                    <CardTitle className="text-sm font-medium">
+                      Current Value
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className="flex flex-row items-center justify-between space-y-0 ">
                     <div className="text-2xl font-bold">$427.26</div>
@@ -718,8 +679,8 @@ export default function Dashboard() {
             </div>
 
             <div>
-              <Button className="w-full py-5 mb-4">Create New Stock</Button>
-              <Button className="w-full py-5">Manage Stocks</Button>
+              <Button className="bg-[#2e3327] dark:bg-primary dark:hover:bg-primary/90 hover:bg-[#393d32] w-full py-5 mb-4">Create New Stock</Button>
+              <Button className="bg-[#2e3327] dark:bg-primary dark:hover:bg-primary/90 hover:bg-[#393d32] w-full py-5">Manage Stocks</Button>
               <Card className="mt-6" x-chunk="dashboard-01-chunk-5">
                 <CardHeader className="flex-row justify-between items-center">
                   <CardTitle>Market</CardTitle>
