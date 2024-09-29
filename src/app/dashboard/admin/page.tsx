@@ -184,7 +184,7 @@ export default function Dashboard() {
             </SheetContent>
           </Sheet>
           <div className="w-full flex-1"></div>
-          <p className="text-white text-sm font-base">Hi! John Doe</p>
+          <p className="text-white text-sm font-base">Hi! Sam Doe</p>
           <DropdownMenu>
             <DropdownMenuTrigger asChild className="text-white bg-[#2e3327] hover:bg-[#393d32] dark:bg-secondary dark:hover:bg-secondary border-[#2e3327]">
               <Button variant="secondary" size="icon" className="rounded-full">
