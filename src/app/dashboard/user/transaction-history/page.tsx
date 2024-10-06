@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 import { Input } from "@/components/ui/input"
 import {
     Table,
@@ -13,10 +11,7 @@ import {
     SiTesla,
     SiApple,
     SiAmazon,
-    SiNetflix,
     SiGoogle,
-    SiMcdonalds,
-    SiWise,
 } from "react-icons/si"
 export default function TransactionHistory() {
     return (

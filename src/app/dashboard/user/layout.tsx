@@ -6,16 +6,13 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 import {
   CircleUser,
-  Home,
   Menu,
   Package,
   Package2,
-  ShoppingCart,
   Users,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import {
   DropdownMenu,
   DropdownMenuContent,
