@@ -82,18 +82,12 @@ export default function DashboardLayout({
         </div>
         <div className="flex flex-col">
           <header className="dark:bg-muted/40 flex h-14 items-center gap-4 pr-4 lg:h-[60px] lg:pr-6">
-            <div className="md:hidden flex h-14 items-center px-4 lg:h-[60px] lg:px-6">
-              <Link href="/" className="text-white flex items-center gap-2 font-semibold">
-                <SiStockx className="h-4 w-4 md:h-6 md:w-6" />
-                <span className="text-sm">SamStocks</span>
-              </Link>
-            </div>
             <Sheet>
               <SheetTrigger asChild>
                 <Button
                   variant="outline"
                   size="icon"
-                  className="shrink-0 md:hidden"
+                  className="shrink-0 md:hidden ml-4"
                 >
                   <Menu className="h-5 w-5" />
                   <span className="sr-only">Toggle navigation menu</span>
@@ -132,6 +126,13 @@ export default function DashboardLayout({
                 </nav>
               </SheetContent>
             </Sheet>
+            <div className="md:hidden flex h-14 items-center pr-4 lg:h-[60px] lg:px-6">
+              <Link href="/" className="text-white flex items-center gap-2 font-semibold">
+                <SiStockx className="h-4 w-4 md:h-6 md:w-6" />
+                <span className="text-sm">SamStocks</span>
+              </Link>
+            </div>
+
             <div className="w-full flex-1"></div>
             <p className="hidden md:block text-white text-sm font-base">Hi! Sam Doe</p>
             <DropdownMenu>
@@ -156,7 +157,7 @@ export default function DashboardLayout({
             <div className="hidden md:block text-white text-sm font-base">
               Cash Balance = $3,200
             </div>
-            <Button className="hidden md:block px-5 text-xs">Buy/Sell Stocks</Button>
+            <Button className="hidden hover:bg-primary/50 dark:hover:bg-primary/90 md:block px-5 text-xs">Buy/Sell Stocks</Button>
             <ModeToggle />
           </header>
           <main className="bg-white dark:bg-transparent rounded-2xl flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">

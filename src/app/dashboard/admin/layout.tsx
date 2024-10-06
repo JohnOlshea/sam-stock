@@ -53,7 +53,7 @@ export default function DashboardLayout({
               <nav className="grid gap-4 items-start text-sm font-medium mt-8">
                 <Link
                   href="#"
-                  className="text-white flex items-center gap-3 pl-6 pr-3 py-2 py-2 text-muted-foreground transition-all hover:bg-[#2e3327] dark:hover:bg-muted"
+                  className="text-white flex items-center gap-3 bg-[#2e3327] pl-6 pr-3 py-2 transition-all hover:bg-[#2e3327] dark:bg-muted dark:hover:bg-muted"
                 >
                   <Home className="h-4 w-4" />
                   Dashboard
@@ -70,7 +70,7 @@ export default function DashboardLayout({
                 </Link>
                 <Link
                   href="#"
-                  className="text-white flex items-center gap-3 bg-[#2e3327] pl-6 pr-3 py-2 transition-all hover:bg-[#2e3327] dark:bg-muted dark:hover:bg-muted"
+                  className="text-white flex items-center gap-3 pl-6 pr-3 py-2 py-2 text-muted-foreground transition-all hover:bg-[#2e3327] dark:hover:bg-muted"
                 >
                   <Package className="h-4 w-4" />
                   Stock Manager{" "}
@@ -88,18 +88,13 @@ export default function DashboardLayout({
         </div>
         <div className="flex flex-col">
           <header className="dark:bg-muted/40 flex h-14 items-center gap-4 pr-4 lg:h-[60px] lg:pr-6">
-            <div className="md:hidden flex h-14 items-center px-4 lg:h-[60px] lg:px-6">
-              <Link href="/" className="text-white flex items-center gap-2 font-semibold">
-                <SiStockx className="h-6 w-6" />
-                <span className="">SamStocks</span>
-              </Link>
-            </div>
             <Sheet>
               <SheetTrigger asChild>
                 <Button
                   variant="outline"
                   size="icon"
-                  className="shrink-0 md:hidden"
+                  className="shrink-0 md:hidden ml-4"
+
                 >
                   <Menu className="h-5 w-5" />
                   <span className="sr-only">Toggle navigation menu</span>
@@ -116,14 +111,14 @@ export default function DashboardLayout({
                   </Link>
                   <Link
                     href="#"
-                    className="mx-[-0.65rem] flex items-center gap-4 px-3 py-2 text-muted-foreground hover:text-foreground"
+                    className="mx-[-0.65rem] flex items-center gap-4 rounded-xl bg-muted px-3 py-2 text-foreground hover:text-foreground"
                   >
                     <Home className="h-5 w-5" />
                     Dashboard
                   </Link>
                   <Link
                     href="#"
-                    className="mx-[-0.65rem] flex items-center gap-4 rounded-xl bg-muted px-3 py-2 text-foreground hover:text-foreground"
+                    className="mx-[-0.65rem] flex items-center gap-4 px-3 py-2 text-muted-foreground hover:text-foreground"
                   >
                     <ShoppingCart className="h-5 w-5" />
                     Users
@@ -148,6 +143,13 @@ export default function DashboardLayout({
                 </nav>
               </SheetContent>
             </Sheet>
+            <div className="md:hidden flex h-14 items-center pr-4 lg:h-[60px] lg:px-6">
+              <Link href="/" className="text-white flex items-center gap-2 font-semibold">
+                <SiStockx className="h-4 w-4 md:h-6 md:w-6" />
+                <span className="text-sm">SamStocks</span>
+              </Link>
+            </div>
+
             <div className="w-full flex-1"></div>
             <p className="text-white text-sm font-base">Hi! Sam Doe</p>
             <DropdownMenu>

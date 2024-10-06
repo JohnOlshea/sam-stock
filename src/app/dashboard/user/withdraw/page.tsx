@@ -30,7 +30,7 @@ export default function CardWithForm() {
                 </CardContent>
                 <CardFooter className="flex justify-between gap-8">
                     <Button className="w-1/2">Withdraw</Button>
-                    <Button variant="secondary" className="w-1/2">Cancel</Button>
+                    <Button variant="secondary" className="w-1/2 bg-gray-200/70 dark:bg-secondary dark:hover:bg-secondary/80">Cancel</Button>
                 </CardFooter>
             </Card>
             <Separator />
