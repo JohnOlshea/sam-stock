@@ -1,5 +1,5 @@
 "use client"
-// import Image from "next/image"
+import Image from "next/image"
 import { useRouter } from "next/navigation";
 import Link from "next/link"
 import { FormEvent } from "react";
@@ -24,15 +24,23 @@ const LoginPage = () => {
         <>
             {/* Cover Image Column (Visible only on large screens) */}
             <div className="hidden bg-muted lg:block relative">
-                {/* <Image
-                    src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/qpzixtgr2tnfw7un6ofa"
+                <Image
+                    src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/huhv2r6sdg59xfdhedtb"
                     alt="Stock market trading illustration"
                     width="1920"
                     height="1080"
                     className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
                     priority
-                /> */}
-                <div className="absolute top-1/2 right-[-7.5rem] transform -translate-y-1/2 bg-gray-300 h-[15rem] w-[15rem]">
+                />
+                <div className="absolute top-1/2 right-[-7.5rem] transform -translate-y-1/2 h-[15rem] w-[15rem]">
+			<Image
+			    src="https://res.cloudinary.com/dc3apwy48/image/upload/v1728232297/fhufadv9rmp8sj2almyt.jpg"
+			    alt="Stock market trading illustration"
+			    width="500"
+			    height="500"
+			    className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale shadow-[0_0_5px_rgba(0,0,0,0.5)] rounded-lg"
+			    priority
+			/>
                 </div>
             </div>
             {/* Login Form Column */}

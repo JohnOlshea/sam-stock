@@ -1,5 +1,5 @@
 "use client"
-// import Image from "next/image"
+import Image from "next/image"
 import { useRouter } from "next/navigation";
 import Link from "next/link"
 import { FormEvent } from "react";
@@ -24,16 +24,25 @@ const RegisterPage = () => {
         <>
             {/* Cover Image Column (Visible only on large screens) */}
             <div className="hidden bg-muted lg:block relative">
-                {/* <Image
-                    src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/qpzixtgr2tnfw7un6ofa"
+                <Image
+                    src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/koq1hb13emjtyd39tb8d"
                     alt="Stock market trading illustration"
                     width="1920"
                     height="1080"
                     className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
                     priority
-                /> */}
-                <div className="absolute top-1/2 right-[-7.5rem] transform -translate-y-1/2 bg-gray-300 h-[15rem] w-[15rem]">
+                />
+		<div className="absolute top-1/2 right-[-7.5rem] transform -translate-y-1/2 h-[15rem] w-[15rem]">
+                        <Image
+                            src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/ng2rblrstpcxtz3ssnew"
+                            alt="Stock market trading illustration"
+                            width="500"
+                            height="500"
+                            className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale shadow-[0_0_5px_rgba(0,0,0,0.5)] rounded-lg"
+                            priority
+                        />
                 </div>
+
             </div>
             {/* Login Form Column */}
             <div className="flex items-center justify-center py-12 lg:col-span-2">

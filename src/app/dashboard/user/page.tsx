@@ -43,6 +43,7 @@ import {
   SiGoogle,
   SiMcdonalds,
   SiWise,
+  SiStockx,
 } from "react-icons/si";
 import { FaArrowUpRightDots } from "react-icons/fa6";
 import { FaDollarSign } from "react-icons/fa";
@@ -50,7 +51,7 @@ import { FaDollarSign } from "react-icons/fa";
 // export const description =
 //   "A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action."
 
-export default function Dashboard() {
+export default function UserDashboard() {
   return (
     <>
       <div className="flex items-center">
@@ -59,7 +60,7 @@ export default function Dashboard() {
 
       <div className="grid flex-1 items-start gap-4 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
         <div className="grid auto-rows-max items-start md:gap-8 lg:col-span-2">
-          <div className="grid gap-2 grid-cols-1 md:grid-cols-2 md:grid-cols-3 md:gap-4 lg:grid-cols-3">
+          <div className="grid gap-2 grid-cols-2 md:grid-cols-2 md:grid-cols-3 md:gap-4 lg:grid-cols-3">
             <Card className="bg-[#eaf1f3] border-none shadow-none dark:bg-gray-900" x-chunk="dashboard-01-chunk-0">
               <CardHeader className="flex flex-row p-[7px] mb-[-17px] gap-2 items-center">
                 <SiApple className="w-7 h-7 p-1 text-white bg-gray-900 dark:bg-transparent dark:border dark:border-[#27272a] rounded-lg" />
@@ -384,7 +385,7 @@ export default function Dashboard() {
           </div>
 
           <Card
-            className="mt-6 md:mt-0 flex flex-col" x-chunk="charts-01-chunk-1"
+            className="flex flex-col" x-chunk="charts-01-chunk-1"
           >
 
 
@@ -425,7 +426,7 @@ export default function Dashboard() {
 
               </div>
             </CardHeader>
-            <CardContent className="p-0 md:p-6 flex flex-1 items-center">
+            <CardContent className="flex flex-1 items-center">
               <ChartContainer
                 config={{
                   resting: {
