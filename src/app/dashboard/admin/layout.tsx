@@ -111,7 +111,7 @@ export default function DashboardLayout({
                     href="#"
                     className="flex items-center gap-2 text-lg font-semibold"
                   >
-                    <Package2 className="h-6 w-6" />
+                    <Package2 className="sr-only h-6 w-6" />
                     <span className="sr-only">Samstocks</span>
                   </Link>
                   <Link
