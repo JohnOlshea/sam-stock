@@ -109,21 +109,21 @@ export default function DashboardLayout({
                     <span className="sr-only">Samstocks</span>
                   </Link>
                   <Link
-                    href="#"
+                    href="/dashboard/user/transaction-history"
                     className="mx-[-0.65rem] flex items-center gap-4 px-3 py-2 text-muted-foreground hover:text-foreground"
                   >
                     <Package className="h-5 w-5" />
                     Transactions
                   </Link>
                   <Link
-                    href="#"
+                    href="/dashboard/user/deposit"
                     className="mx-[-0.65rem] flex items-center gap-4 px-3 py-2 text-muted-foreground hover:text-foreground"
                   >
                     <Users className="h-5 w-5" />
                     Deposit Cash
                   </Link>
                   <Link
-                    href="#"
+                    href="/dashboard/user/withdraw"
                     className="mx-[-0.65rem] flex items-center gap-4 px-3 py-2 text-muted-foreground hover:text-foreground"
                   >
                     <Users className="h-5 w-5" />
