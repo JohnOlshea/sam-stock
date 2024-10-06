@@ -1,6 +1,5 @@
 "use client"
 
-
 import {
   Avatar,
 } from "@/components/ui/avatar"
@@ -43,7 +42,6 @@ import {
   SiGoogle,
   SiMcdonalds,
   SiWise,
-  SiStockx,
 } from "react-icons/si";
 import { FaArrowUpRightDots } from "react-icons/fa6";
 import { FaDollarSign } from "react-icons/fa";
