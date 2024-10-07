@@ -87,7 +87,7 @@ export default function DashboardLayout({
           </div>
         </div>
         <div className="flex flex-col">
-          <header className="dark:bg-muted/40 flex h-14 items-center gap-4 pr-4 lg:h-[60px] lg:pr-6">
+          <header className="bg-[#393d32] dark:bg-muted/40 flex h-14 items-center gap-4 pr-4 lg:h-[60px] lg:pr-6">
             <Sheet>
               <SheetTrigger asChild>
                 <Button
