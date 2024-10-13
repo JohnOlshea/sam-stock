@@ -1,5 +1,8 @@
+"use client"
+
 import React from 'react';
 import Link from "next/link"
+import { usePathname } from 'next/navigation';
 import { ThemeProvider } from "@/components/theme-provider"
 
 import {
@@ -33,6 +36,8 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode
 }) {
+  const pathname = usePathname();
+
   return (
     <ThemeProvider
       attribute="class"
@@ -52,15 +57,17 @@ export default function DashboardLayout({
             <div className="flex-1">
               <nav className="grid gap-4 items-start text-sm font-medium mt-8">
                 <Link
-                  href="#"
-                  className="text-white flex items-center gap-3 bg-[#2e3327] pl-6 pr-3 py-2 transition-all hover:bg-[#2e3327] dark:bg-muted dark:hover:bg-muted"
+                  href="/dashboard/admin"
+                  className={`text-white flex items-center gap-3 pl-6 pr-3 py-2 transition-all hover:bg-[#2e3327] dark:hover:bg-muted ${pathname === '/dashboard/admin' && 'bg-[#2e3327] dark:bg-muted'
+                    }`}
                 >
                   <Home className="h-4 w-4" />
                   Dashboard
                 </Link>
                 <Link
-                  href="#"
-                  className="text-white flex items-center gap-3 pl-6 pr-3 py-2 text-muted-foreground transition-all hover:bg-[#2e3327] dark:hover:bg-muted"
+                  href="/dashboard/admin/users"
+                  className={`text-white flex items-center gap-3 pl-6 pr-3 py-2 transition-all hover:bg-[#2e3327] dark:hover:bg-muted ${pathname === '/dashboard/admin/users' && 'bg-[#2e3327] dark:bg-muted'
+                  }`}
                 >
                   <ShoppingCart className="h-4 w-4" />
                   Users
@@ -69,8 +76,9 @@ export default function DashboardLayout({
                   </Badge>
                 </Link>
                 <Link
-                  href="#"
-                  className="text-white flex items-center gap-3 pl-6 pr-3 py-2 py-2 text-muted-foreground transition-all hover:bg-[#2e3327] dark:hover:bg-muted"
+                  href="/dashboard/admin/stocks"
+                  className={`text-white flex items-center gap-3 pl-6 pr-3 py-2 transition-all hover:bg-[#2e3327] dark:hover:bg-muted ${pathname === '/dashboard/admin/stocks' && 'bg-[#2e3327] dark:bg-muted'
+                  }`}
                 >
                   <Package className="h-4 w-4" />
                   Stock Manager{" "}
