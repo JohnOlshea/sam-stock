@@ -15,6 +15,7 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import { MoreHorizontal } from "lucide-react"
+import Link from "next/link"
 import { SiApple, SiTesla } from "react-icons/si"
 
 export default function BuySellStocks() {
@@ -94,7 +95,9 @@ export default function BuySellStocks() {
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent align="end">
                                         <DropdownMenuItem className="cursor-pointer">Buy/Sell</DropdownMenuItem>
-                                        <DropdownMenuItem className="cursor-pointer">View Details</DropdownMenuItem>
+                                        <Link href="/dashboard/user/portfolio/detail" passHref>
+                                            <DropdownMenuItem className="cursor-pointer">View Details</DropdownMenuItem>
+                                        </Link>
                                     </DropdownMenuContent>
                                 </DropdownMenu>
                             </TableCell>
@@ -132,7 +135,9 @@ export default function BuySellStocks() {
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent align="end">
                                         <DropdownMenuItem className="cursor-pointer">Buy/Sell</DropdownMenuItem>
-                                        <DropdownMenuItem className="cursor-pointer">View Details</DropdownMenuItem>
+                                        <Link href="/dashboard/user/portfolio/detail" passHref>
+                                            <DropdownMenuItem className="cursor-pointer">View Details</DropdownMenuItem>
+                                        </Link>
                                     </DropdownMenuContent>
                                 </DropdownMenu>
                             </TableCell>
@@ -170,7 +175,9 @@ export default function BuySellStocks() {
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent align="end">
                                         <DropdownMenuItem className="cursor-pointer">Buy/Sell</DropdownMenuItem>
-                                        <DropdownMenuItem className="cursor-pointer">View Details</DropdownMenuItem>
+                                        <Link href="/dashboard/user/portfolio/detail" passHref>
+                                            <DropdownMenuItem className="cursor-pointer">View Details</DropdownMenuItem>
+                                        </Link>
                                     </DropdownMenuContent>
                                 </DropdownMenu>
                             </TableCell>
