@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { ThemeProvider } from "@/components/theme-provider"
 
 import {
+  ChartArea,
   CircleUser,
   Home,
   Menu,
@@ -51,7 +52,7 @@ export default function DashboardLayout({
             <div className="flex h-14 items-center px-4 lg:h-[60px] lg:px-6">
               <Link href="/" className="text-white flex items-center gap-2 font-semibold">
                 <SiStockx className="h-6 w-6" />
-                <span className="">SamStocks</span>
+                <span className="">Stockup</span>
               </Link>
             </div>
             <div className="flex-1">
@@ -69,7 +70,7 @@ export default function DashboardLayout({
                   className={`text-white flex items-center gap-3 pl-6 pr-3 py-2 transition-all hover:bg-[#2e3327] dark:hover:bg-muted ${pathname === '/dashboard/admin/users' && 'bg-[#2e3327] dark:bg-muted'
                   }`}
                 >
-                  <ShoppingCart className="h-4 w-4" />
+                  <Users className="h-4 w-4" />
                   Users
                   <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
                     6
@@ -84,11 +85,12 @@ export default function DashboardLayout({
                   Stock Manager{" "}
                 </Link>
                 <Link
-                  href="#"
-                  className="text-white flex items-center gap-3 pl-6 pr-3 py-2 text-muted-foreground transition-all hover:bg-[#2e3327] dark:hover:bg-muted"
+                  href="/dashboard/admin/market"
+                  className={`text-white flex items-center gap-3 pl-6 pr-3 py-2 transition-all hover:bg-[#2e3327] dark:hover:bg-muted ${pathname === '/dashboard/admin/market' && 'bg-[#2e3327] dark:bg-muted'
+                  }`}
                 >
-                  <Users className="h-4 w-4" />
-                  Market
+                  <ChartArea className="h-4 w-4" />
+                  Market{" "}
                 </Link>
               </nav>
             </div>
@@ -169,9 +171,6 @@ export default function DashboardLayout({
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>Settings</DropdownMenuItem>
-                <DropdownMenuItem>Support</DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <Link href="/auth/login" passHref>
                   <DropdownMenuItem className="cursor-pointer">Logout</DropdownMenuItem>

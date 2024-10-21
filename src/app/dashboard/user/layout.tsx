@@ -6,10 +6,14 @@ import Link from "next/link"
 import { ThemeProvider } from "@/components/theme-provider"
 
 import {
+  ChartArea,
   CircleUser,
+  Download,
+  Home,
   Menu,
   Package,
   Package2,
+  Upload,
   Users,
 } from "lucide-react"
 
@@ -48,17 +52,33 @@ export default function DashboardLayout({
             <div className="flex h-14 items-center px-4 lg:h-[60px] lg:px-6">
               <Link href="/" className="text-white flex items-center gap-2 font-semibold">
                 <SiStockx className="h-6 w-6" />
-                <span className="">SamStocks</span>
+                <span className="">Stockup</span>
               </Link>
             </div>
             <div className="flex-1">
               <nav className="grid gap-4 items-start text-sm font-medium mt-8">
+              <Link
+                  href="/dashboard/user"
+                  className={`text-white flex items-center gap-3 pl-6 pr-3 py-2 transition-all hover:bg-[#2e3327] dark:hover:bg-muted ${pathname === '/dashboard/user' && 'bg-[#2e3327] dark:bg-muted'
+                    }`}
+                >
+                  <Home className="h-4 w-4" />
+                  Dashboard
+                </Link>
+                <Link
+                  href="/dashboard/user/portfolio"
+                  className={`text-white flex items-center gap-3 pl-6 pr-3 py-2 transition-all hover:bg-[#2e3327] dark:hover:bg-muted ${pathname === '/dashboard/user/portfolio' && 'bg-[#2e3327] dark:bg-muted'
+                    }`}
+                >
+                  <Package className="h-4 w-4" />
+                  Porfolio
+                </Link>
                 <Link
                   href="/dashboard/user/transaction-history"
                   className={`text-white flex items-center gap-3 pl-6 pr-3 py-2 transition-all hover:bg-[#2e3327] dark:hover:bg-muted ${pathname === '/dashboard/user/transaction-history' && 'bg-[#2e3327] dark:bg-muted'
                     }`}
                 >
-                  <Package className="h-4 w-4" />
+                  <ChartArea className="h-4 w-4" />
                   Transactions
                 </Link>
                 <Link
@@ -66,7 +86,7 @@ export default function DashboardLayout({
                   className={`text-white flex items-center gap-3 pl-6 pr-3 py-2 text-muted-foreground transition-all hover:bg-[#2e3327] dark:hover:bg-muted ${pathname === '/dashboard/user/deposit' && 'bg-[#2e3327] dark:bg-muted'
                     }`}
                 >
-                  <Users className="h-4 w-4" />
+                  <Download className="h-4 w-4" />
                   Deposit Cash
                 </Link>
                 <Link
@@ -74,7 +94,7 @@ export default function DashboardLayout({
                   className={`text-white flex items-center gap-3 pl-6 pr-3 py-2 text-muted-foreground transition-all hover:bg-[#2e3327] dark:hover:bg-muted ${pathname === '/dashboard/user/withdraw' && 'bg-[#2e3327] dark:bg-muted'
                     }`}
                 >
-                  <Users className="h-4 w-4" />
+                  <Upload className="h-4 w-4" />
                   Withdraw Cash
                 </Link>
               </nav>
