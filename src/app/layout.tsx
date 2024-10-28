@@ -19,25 +19,6 @@ export default function RootLayout({
         className={"font-sans antialiased"}
       >
         {children}
-        <footer className="bg-[#949494] py-4">
-          <ul className="flex justify-center flex-col md:flex-row gap-3 md:gap-5 text-center">
-            <li className="text-sm">
-              <Link className="hover:underline" href="/">
-                Privacy Policy
-              </Link>
-            </li>
-            <li className="text-sm">
-              <Link className="hover:underline" href="/">
-                Terms of Service
-              </Link>
-            </li>
-            <li className="text-sm">
-              <Link className="hover:underline" href="/">
-                Help
-              </Link>
-            </li>
-          </ul>
-        </footer>
       </body>
     </html>
   );
